@@ -5,7 +5,7 @@ Image Uploader Example: Node, Kue, S3, and GraphicsMagick
 
 I had a project where I needed to upload an image, resize it into various sizes, and store it in S3. I wanted to create a small sample of something similar so that I can use it again. 
 
-This application uploads an file selected by the user, converts it to 3 different sizes, and saves them all in unique locations on S3.
+This application uploads a file selected by the user, converts it to 3 different sizes, and saves them all in unique locations on S3.
 
 ## Libraries Used
 
