@@ -59,7 +59,7 @@ jobs.process('create image', 3, function(job, done) {
   var height = job.data.height;
   var fileName = job.data.fileName;
   var filePath = job.data.filePath;
-  var awsKey = "uploads-bucket/" + Date.now() + "/img" + width + "x" + height + "_" + fileName;
+  var awsKey = "uploads-folder/" + Date.now() + "/img" + width + "x" + height + "_" + fileName;
 
   gm(filePath)
     .resize(width, height + "^")
@@ -78,7 +78,7 @@ jobs.process('create image', 3, function(job, done) {
       var image = Buffer.concat(i);
 
       var data = {
-        Bucket: "sample-bucket-name3",
+        Bucket: "sample-bucket-name",
         Key: awsKey,
         Body: image,
         ContentType: mime.lookup(fileName),
