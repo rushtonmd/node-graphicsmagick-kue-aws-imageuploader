@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Sample application to upload an image, resize it, and save it to Amazon S3.
+  form(action='/upload',method='post', enctype="multipart/form-data")
+    fieldset
+      div
+        input(type='file', name='imageFile')
+      div
+        label(for="size600x600") 600x600
+        input(type='checkbox', name='size600x600')
+      div
+        label(for="size100x100") 100x100
+        input(type='checkbox', name='size100x100')
+      div
+        label(for="size50x50") 50x50
+        input(type='checkbox', name='size50x50')
+      div
+        input(type='submit',value='Upload',data-transition='fade', data-theme='c')
+  a(href="/image-processing") Check Image Processing Queues
